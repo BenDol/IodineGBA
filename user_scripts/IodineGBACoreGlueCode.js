@@ -63,7 +63,7 @@ function registerGUIEvents() {
         Iodine.restart();
         e.preventDefault();
     });
-    document.getElementById("sound").checked = false;
+    document.getElementById("sound").checked ? Iodine.enableAudio() : Iodine.disableAudio();
     addEvent("click", document.getElementById("sound"), function () {
         if (this.checked) {
             Iodine.enableAudio();
@@ -72,17 +72,17 @@ function registerGUIEvents() {
             Iodine.disableAudio();
         }
     });
-    document.getElementById("skip_boot").checked = false;
+    Iodine.toggleSkipBootROM(document.getElementById("skip_boot").checked);
     addEvent("click", document.getElementById("skip_boot"), function () {
              Iodine.toggleSkipBootROM(this.checked);
     });
-    document.getElementById("toggleSmoothScaling").checked = true;
+    if (Blitter) { Blitter.setSmoothScaling(document.getElementById("toggleSmoothScaling").checked); }
     addEvent("click", document.getElementById("toggleSmoothScaling"), function () {
              if (Blitter) {
                 Blitter.setSmoothScaling(this.checked);
              }
     });
-    document.getElementById("toggleDynamicSpeed").checked = false;
+    Iodine.toggleDynamicSpeed(document.getElementById("toggleDynamicSpeed").checked)
     addEvent("click", document.getElementById("toggleDynamicSpeed"), function () {
              Iodine.toggleDynamicSpeed(this.checked);
     });

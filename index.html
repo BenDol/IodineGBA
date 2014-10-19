@@ -56,13 +56,16 @@
         <script src="user_scripts/XAudioJS/swfobject.js"></script>
         <script src="user_scripts/XAudioJS/resampler.js"></script>
         <script src="user_scripts/XAudioJS/XAudioServer.js"></script>
+        <script src="user_scripts/JQuery/jquery-1.11.1.min.js"></script>
         <script src="user_scripts/IodineGBAROMLoadGlueCode.js"></script>
         <script src="user_scripts/IodineGBAJoyPadGlueCode.js"></script>
         <script src="user_scripts/IodineGBASavesGlueCode.js"></script>
         <script src="user_scripts/IodineGBAGraphicsGlueCode.js"></script>
         <script src="user_scripts/IodineGBAAudioGlueCode.js"></script>
         <script src="user_scripts/IodineGBACoreGlueCode.js"></script>
+        <script src="user_scripts/IodineGBAControlPanelCode.js"></script>
         <script src="user_scripts/base64.js"></script>
+        
         <link rel="stylesheet" href="user_css/main.css">
     </head>
     <body>
@@ -70,17 +73,19 @@
             <canvas id="emulator_target" width="240" height="160"></canvas>
         </div>
         <span id="tempMessage">...</span>
+        <button id="toggle"><</button>
         <div id="control_panel">
             <div id="load_panel">
                 <form>
                     <fieldset>
                         <legend>Load ROM:</legend>
                         <div class="fileLoad">
-                            <label>BIOS:</label><input type="file" id="bios_load" class="files">
+                            <label>BIOS:</label><input type="file" id="bios_load" class="files"/>
                         </div>
-                        <div class="fileLoad">
-                            <label>Game:</label><input type="file" id="rom_load" class="files">
+                        <div class="fileLoad" style="margin-bottom:10px;">
+                            <label>Game:</label><input type="file" id="rom_load" class="files"/>
                         </div>
+                        <a href="gba_bios.bin">Download Bios</a>
                     </fieldset>
                 </form>
             </div>
@@ -93,7 +98,7 @@
                             <button id="pause">Pause</button>
                             <button id="restart">Restart</button>
                         </div>
-                        <label>Skip Boot Intro: </label><input type="checkbox" id="skip_boot" class="checkbox">
+                        <label>Skip Boot Intro: </label><input type="checkbox" id="skip_boot" checked="checked" class="checkbox">
                         <label>Smooth Scaling: </label><input type="checkbox" id="toggleSmoothScaling" checked="checked" class="checkbox">
                         <label>Dynamic Speed: </label><input type="checkbox" id="toggleDynamicSpeed" class="checkbox">
                         <label>Sound: </label><input type="checkbox" id="sound" class="checkbox">
