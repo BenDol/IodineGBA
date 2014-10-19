@@ -86,7 +86,7 @@ button#toggle {
     padding: 0;
     height:101%;
     width: 13px;
-    opacity:0.3;
+    opacity:0.2;
     background-image: url('../user_images/arrow-left.png');
     background-repeat: no-repeat;
     background-position: center;
