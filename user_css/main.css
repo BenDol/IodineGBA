@@ -78,14 +78,18 @@ button#toggle {
     top: -1px;
     position: absolute;
     left: 280px;
-    font-size: 18pt;
+    font-size: 9pt;
     font-weight: bold;
     text-align: right;
     vertical-align: bottom;
     font-family: monospace;
     padding: 0;
-    height:40px;
+    height:101%;
+    width: 13px;
     opacity:0.3;
+    background-image: url('../user_images/arrow-left.png');
+    background-repeat: no-repeat;
+    background-position: center;
     transition: width 2s;
     -moz-transition: width 2s; /* Firefox 4 */
     -webkit-transition: width 2s; /* Safari and Chrome */

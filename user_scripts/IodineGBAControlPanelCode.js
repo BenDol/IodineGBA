@@ -34,7 +34,7 @@ $(document).ready(function(){
   
   function showControlPanel() {
     $("button#toggle").animate({'marginLeft' : "0px"}, 200);
-    $("button#toggle").text("<");
+    $("button#toggle").css("background-image", "url('user_images/arrow-left.png')");
     $("div#main").animate({'marginLeft' : "0px"}, 200);
     $('div#control_panel').show("fast");
   }
@@ -42,7 +42,7 @@ $(document).ready(function(){
   function hideControlPanel() {
     $("div#main").animate({'marginLeft' : "-" + $("div#main").css("left")}, 200);
     $("button#toggle").animate({'marginLeft' : "-" + $("button#toggle").css("left")}, 200);
-    $("button#toggle").text(">");
+    $("button#toggle").css("background-image", "url('user_images/arrow-right.png')");
     $('div#control_panel').hide("fast");
   }
 });
