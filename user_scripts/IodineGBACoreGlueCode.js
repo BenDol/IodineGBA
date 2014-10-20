@@ -51,6 +51,9 @@ function registerGUIEvents() {
         Iodine.play();
         this.style.display = "none";
         document.getElementById("pause").style.display = "inline";
+        document.getElementById("main").style.opacity = "1";
+        document.getElementById("emulator_target").style.width = "100%";
+        document.getElementById("emulator_target").style.height = "100%";
         e.preventDefault();
     });
     addEvent("click", document.getElementById("pause"), function (e) {

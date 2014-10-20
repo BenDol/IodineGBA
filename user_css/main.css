@@ -59,14 +59,17 @@ div#main {
     position: absolute;
     left: 275px;
     right: 0px;
-    background-color: rgb(200, 200, 200);
+    background-image: url(../user_images/iodinegba_bw.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
 }
 div#main canvas {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
 }
 canvas {
     /*cursor: none;*/
