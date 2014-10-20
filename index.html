@@ -57,6 +57,7 @@
         <script src="user_scripts/XAudioJS/resampler.js"></script>
         <script src="user_scripts/XAudioJS/XAudioServer.js"></script>
         <script src="user_scripts/JQuery/jquery-1.11.1.min.js"></script>
+        <script src="user_scripts/Bootstrap/bootstrap.min.js"></script>
         <script src="user_scripts/IodineGBAROMLoadGlueCode.js"></script>
         <script src="user_scripts/IodineGBAJoyPadGlueCode.js"></script>
         <script src="user_scripts/IodineGBASavesGlueCode.js"></script>
@@ -67,6 +68,8 @@
         <script src="user_scripts/base64.js"></script>
         
         <link rel="stylesheet" href="user_css/main.css">
+        <link rel="stylesheet" href="user_css/bootstrap.min.css">
+        <link rel="stylesheet" href="user_css/bootstrap-theme.min.css">
     </head>
     <body>
         <div id="main">
@@ -75,10 +78,11 @@
         <span id="tempMessage">...</span>
         <button id="toggle"></button>
         <div id="control_panel">
+            <img src="user_images/iodinegba.png"/>
             <div id="load_panel">
                 <form>
                     <fieldset>
-                        <legend>Load ROM:</legend>
+                        <legend>LOAD ROM:</legend>
                         <div class="fileLoad">
                             <label>BIOS:</label><input type="file" id="bios_load" class="files"/>
                         </div>
@@ -92,23 +96,23 @@
             <div id="play_controls">
                 <form>
                     <fieldset>
-                        <legend>Controls: </legend>
+                        <legend>CONTROLS: </legend>
                         <div id="playControls">
-                            <button id="play">Play</button>
-                            <button id="pause">Pause</button>
-                            <button id="restart">Restart</button>
+                            <button class="btn btn-success" id="play">Play</button>
+                            <button class="btn btn-warning" id="pause">Pause</button>
+                            <button class="btn btn-info" id="restart">Restart</button>
                         </div>
-                        <label>Skip Boot Intro: </label><input type="checkbox" id="skip_boot" checked="checked" class="checkbox">
-                        <label>Smooth Scaling: </label><input type="checkbox" id="toggleSmoothScaling" checked="checked" class="checkbox">
-                        <label>Dynamic Speed: </label><input type="checkbox" id="toggleDynamicSpeed" class="checkbox">
-                        <label>Sound: </label><input type="checkbox" id="sound" class="checkbox">
+                        <label for="skip_boot">Skip Boot Intro: </label><input type="checkbox" name="skip_boot" id="skip_boot" checked="checked" class="checkbox"></input>
+                        <label for="smooth_scaling">Smooth Scaling: </label><input type="checkbox" name="smooth_scaling" id="smooth_scaling" checked="checked" class="checkbox"></input>
+                        <label for="dynamic_speed">Dynamic Speed: </label><input type="checkbox" name="dynamic_speed" id="dynamic_speed" class="checkbox"></input>
+                        <label for="sound">Sound: </label><input type="checkbox" name="sound" id="sound" class="checkbox"></input>
                     </fieldset>
                 </form>
             </div>
             <div id="save_controls">
                 <form>
                     <fieldset>
-                        <legend>Saves: </legend>
+                        <legend>SAVES: </legend>
                         <div id="saveControls">
                             <div class="fileLoad">
                                 <label>Import:</label><input type="file" id="import" class="files">

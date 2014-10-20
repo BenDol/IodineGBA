@@ -17,11 +17,19 @@ input {
     clear: left;
 }
 #play_controls input.checkbox {
+    margin-right:5px;
     float: right;
     clear: right;
 }
+#play {
+    width:80px;
+}
+#restart {
+    width:80px;
+}
 #pause {
     display: none;
+    width:80px;
 }
 div#log_control button {
     clear: none;
@@ -78,7 +86,7 @@ span#tempMessage {
 button#toggle {
     top: -1px;
     position: absolute;
-    left: 280px;
+    left: 275px;
     font-size: 9pt;
     font-weight: bold;
     text-align: right;

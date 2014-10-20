@@ -76,14 +76,14 @@ function registerGUIEvents() {
     addEvent("click", document.getElementById("skip_boot"), function () {
              Iodine.toggleSkipBootROM(this.checked);
     });
-    if (Blitter) { Blitter.setSmoothScaling(document.getElementById("toggleSmoothScaling").checked); }
-    addEvent("click", document.getElementById("toggleSmoothScaling"), function () {
+    if (Blitter) { Blitter.setSmoothScaling(document.getElementById("smooth_scaling").checked); }
+    addEvent("click", document.getElementById("smooth_scaling"), function () {
              if (Blitter) {
                 Blitter.setSmoothScaling(this.checked);
              }
     });
-    Iodine.toggleDynamicSpeed(document.getElementById("toggleDynamicSpeed").checked)
-    addEvent("click", document.getElementById("toggleDynamicSpeed"), function () {
+    Iodine.toggleDynamicSpeed(document.getElementById("dynamic_speed").checked)
+    addEvent("click", document.getElementById("dynamic_speed"), function () {
              Iodine.toggleDynamicSpeed(this.checked);
     });
     addEvent("change", document.getElementById("import"), function (e) {
